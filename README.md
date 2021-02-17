@@ -19,8 +19,9 @@ AndroidPlayer 是一个适用于 Android 平台的影音播发器 SDK ，基于 
 
 * 支持 ARM, ARMv7a, ARM64v8a, X86 主流芯片体系架构
 
+## SDK 使用
 
-```sdk 使用
+```
 
 allprojects {
     repositories {
