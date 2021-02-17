@@ -1,6 +1,7 @@
 package com.lishuaihua.jackplayer.widget;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -102,12 +103,14 @@ public class TableLayoutBinder {
 
         public void setName(String name) {
             if (mNameTextView != null) {
+                mNameTextView.setTextColor(Color.WHITE);
                 mNameTextView.setText(name);
             }
         }
 
         public void setValue(String value) {
             if (mValueTextView != null) {
+                mValueTextView .setTextColor(Color.WHITE);
                 mValueTextView.setText(value);
             }
         }

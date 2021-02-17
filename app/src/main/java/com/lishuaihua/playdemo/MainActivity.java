@@ -2,6 +2,8 @@ package com.lishuaihua.playdemo;
 
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.View;
@@ -69,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
         jackVideoView.setHudView(mHudView);
 
         //设置背景图片
-//        upVideoView.setImage(R.drawable.dog);
+
 
         //设置播放地址
         jackVideoView.setVideoPath(path);

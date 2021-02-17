@@ -49,7 +49,7 @@ import tv.danmaku.ijk.media.player.IjkMediaPlayer;
 import tv.danmaku.ijk.media.player.misc.ITrackInfo;
 
 public class JackVideoView extends FrameLayout implements MediaController.MediaPlayerControl {
-    private String TAG = "UpVideoView";
+    private String TAG = "JackVideoView";
     // settable by the client
     private Uri mUri;
     private Map<String, String> mHeaders;
@@ -381,6 +381,25 @@ public class JackVideoView extends FrameLayout implements MediaController.MediaP
                 Canvas canvas = surface.lockCanvas(null);
                 if (canvas != null) {
                     canvas.drawColor(Color.BLACK);
+                    surface.unlockCanvasAndPost(canvas);
+                }
+            }
+        }
+    }
+
+    private void drawWhite() {
+        if (mSurfaceHolder != null) {
+            Surface surface;
+            if (mSurfaceHolder.getSurfaceHolder() != null) {
+                Canvas canvas = mSurfaceHolder.getSurfaceHolder().lockCanvas();
+                if (canvas != null) {
+                    canvas.drawColor(Color.WHITE);
+                    mSurfaceHolder.getSurfaceHolder().unlockCanvasAndPost(canvas);
+                }
+            } else if ((surface = mSurfaceHolder.openSurface()) != null) {
+                Canvas canvas = surface.lockCanvas(null);
+                if (canvas != null) {
+                    canvas.drawColor(Color.WHITE);
                     surface.unlockCanvasAndPost(canvas);
                 }
             }
@@ -991,7 +1010,7 @@ public class JackVideoView extends FrameLayout implements MediaController.MediaP
             dismissLastFrame();
             mMediaPlayer.start();
             mCurrentState = STATE_PLAYING;
-            mRenderView.getView().setBackgroundDrawable(null);
+            mRenderView.getView().setBackground(null);
         } else {
             Log.i(TAG, "start isInPlaybackState false mMediaPlayer == null:" + (mMediaPlayer == null) + " mCurrentState" + mCurrentState);
         }
@@ -1192,7 +1211,7 @@ public class JackVideoView extends FrameLayout implements MediaController.MediaP
     }
 
 
-    // TODO: 16/5/20 设置播放前至少缓存时间
+
     private void setCacheDuration(long cacheDuration) {
         this.cacheDuration = cacheDuration;
     }

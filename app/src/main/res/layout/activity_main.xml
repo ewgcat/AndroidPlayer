@@ -5,11 +5,13 @@
     android:layout_height="match_parent">
 
     <FrameLayout
+        android:background="@color/white"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <com.lishuaihua.jackplayer.widget.JackVideoView
             android:id="@+id/uvv_vido"
+            android:background="@color/white"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
