@@ -20,7 +20,18 @@ AndroidPlayerSdk 是一个适用于 Android 平台的影音播发器 SDK ，基�
 * 支持 ARM, ARMv7a, ARM64v8a, X86 主流芯片体系架构
 
 ## sdk 使用
+allprojects {
+    repositories {
+        mavenCentral()
+        google()
+        jcenter()
+        maven { url "https://jitpack.io" }
+        maven { url "https://maven.aliyun.com/repository/public" }
+        maven { url 'https://maven.aliyun.com/repository/google' }
+    }
+}
 
+ implementation 'com.github.ewgcat:AndroidPlayer:1.0.6'
 
 
 ## SDK 使用示例
