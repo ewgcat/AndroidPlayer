@@ -1,4 +1,4 @@
-# AndroidPlayerSdk
+# AndroidPlayer
 
 ## SDK 概述
 
