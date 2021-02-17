@@ -115,6 +115,8 @@ public class MainActivity extends AppCompatActivity {
         jackVideoView.start();
     }
 
+
+
     //全屏播放
     public void fullScreen(View view) {
         jackVideoView.fullScreen(this);
