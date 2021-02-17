@@ -1,8 +1,8 @@
-# AndroidPlayerSdk
+# AndroidPlayer
 
 ## SDK 概述
 
-AndroidPlayerSdk 是一个适用于 Android 平台的影音播发器 SDK ，基于 [ijkplayer](https://github.com/Bilibili/ijkplayer) ( based on [ffplay](http://ffmpeg.org/) )，可高速定制化和二次开发，为 Android 开发者提供简单，快捷的接口。
+AndroidPlayer 是一个适用于 Android 平台的影音播发器 SDK ，基于 [ijkplayer](https://github.com/Bilibili/ijkplayer) ( based on [ffplay](http://ffmpeg.org/) )，可高速定制化和二次开发，为 Android 开发者提供简单，快捷的接口。
 
 ## 播放器功能特性
 
@@ -20,7 +20,18 @@ AndroidPlayerSdk 是一个适用于 Android 平台的影音播发器 SDK ，基�
 * 支持 ARM, ARMv7a, ARM64v8a, X86 主流芯片体系架构
 
 ## sdk 使用
+allprojects {
+    repositories {
+        mavenCentral()
+        google()
+        jcenter()
+        maven { url "https://jitpack.io" }
+        maven { url "https://maven.aliyun.com/repository/public" }
+        maven { url 'https://maven.aliyun.com/repository/google' }
+    }
+}
 
+ implementation 'com.github.ewgcat:AndroidPlayer:1.0.6'
 
 
 ## SDK 使用示例
