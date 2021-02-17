@@ -96,14 +96,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void toggle(View view) {
-
         if (jackVideoView.isPlaying()) {
-
             //暂停播放
             jackVideoView.pause();
 
         } else {
-
             //开始播放
             jackVideoView.start();
         }
@@ -122,30 +119,8 @@ public class MainActivity extends AppCompatActivity {
         jackVideoView.fullScreen(this);
     }
 
-    private void fullScreen() {
-        if (getRequestedOrientation() != ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE) {
-            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
-        }
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        DisplayMetrics metrics = new DisplayMetrics();
-        getWindowManager().getDefaultDisplay().getMetrics(metrics);
-        RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(metrics.widthPixels, metrics.heightPixels);
-        mVideoParams = (RelativeLayout.LayoutParams) jackVideoView.getLayoutParams();
-        jackVideoView.setLayoutParams(params);
-        jackVideoView.getTrackInfo();
-    }
-
-    @Override
-    public void onConfigurationChanged(Configuration newConfig) {
-        if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
-        }
-        super.onConfigurationChanged(newConfig);
-    }
-
     @Override
     public void onBackPressed() {
-
         if (jackVideoView.isFullState()) {
             //退出全屏
             jackVideoView.exitFullScreen(this);

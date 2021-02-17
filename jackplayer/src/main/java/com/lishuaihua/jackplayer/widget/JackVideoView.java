@@ -1,7 +1,6 @@
 package com.lishuaihua.jackplayer.widget;
 
 import android.annotation.TargetApi;
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -36,6 +35,7 @@ import android.widget.RelativeLayout;
 import android.widget.TableLayout;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.lishuaihua.jackplayer.R;
 import com.lishuaihua.jackplayer.common.MonitorRecorder;
@@ -1165,7 +1165,7 @@ public class JackVideoView extends FrameLayout implements MediaController.MediaP
         return MediaPlayerCompat.getSelectedTrack(mMediaPlayer, trackType);
     }
 
-    public void fullScreen(Activity activity) {
+    public void fullScreen(AppCompatActivity activity) {
         if (!isFullState) {
             if (activity.getRequestedOrientation() != ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE) {
                 activity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
@@ -1199,7 +1199,7 @@ public class JackVideoView extends FrameLayout implements MediaController.MediaP
         }
     }
 
-    public void exitFullScreen(Activity activity) {
+    public void exitFullScreen(AppCompatActivity activity) {
 
         if (isFullState) {
             if (activity.getRequestedOrientation() == ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE) {

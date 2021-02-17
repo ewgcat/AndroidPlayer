@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <FrameLayout
+    <RelativeLayout
         android:background="@color/white"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -19,10 +19,11 @@
             android:id="@+id/hud_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="right|center_vertical"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
             android:background="#77000000"
-            android:padding="8dp" />
-    </FrameLayout>
+            android:padding="4dp" />
+    </RelativeLayout>
 
 
     <LinearLayout
